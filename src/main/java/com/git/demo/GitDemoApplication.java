@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GitDemoApplication {
 
+	@RequestMapping("/welcome")
+	public String getWelcome(){
+		return "Welcome GIT-Demo project";
+	}
+
 	@RequestMapping("/welcome/{name}")
-	public String getWelcome(@PathVariable String name){
+	public String getWelcomeName(@PathVariable String name){
 		return "Welcome "+name;
 	}
 
